@@ -81,25 +81,46 @@ this.name=name;
 this.cnic=cnic;
 }
 
-public CustomerBuilder(int age ,String contact_info)
+public CustomerBuilder age(int age )
 {
 this.age=age;
+}
+
+public CustomerBuilder contact_info(String contact_info)
+{
 this.contact_info=contact_info;
 }
-
-public CustomerBuilder(String account_number)
+public CustomerBuilder email_address(String email_address)
+{
+this.email_address=email_address;
+}
+	
+public CustomerBuilder account_number(String account_number)
 {
 this.account_number=account_number;
-}
+}	
+	
 
-public CustomerBuilder(int priority_status)
+public CustomerBuilder priority_status(int priority_status)
 {
 this.priority_status=priority_status;
 }
 
-
+public Customer build() 
+{
+	Customer cust =  new Customer(this);
+	validateCustomerObject(Customer);
+	return cust;
+}
   
-    
+//Return the finally constructed Customer  object
+		public Customer build() 
+		{
+			Customer cust =  new Customer(this);
+			Boolean validated=validateCustomerObject(cust);
+			if(validated)
+			return cust;
+		}
    
     public void display() {
         System.out.print("Name: ");
@@ -124,22 +145,16 @@ this.priority_status=priority_status;
         System.out.println(priority_status);
     }
 
-//Return the finally constructed Customer  object
-		public User build() {
-			Customer cust =  new Customer(this);
-			Boolean validated=validateCustomerObject(cust);
-			if(validated)
-			return user;
-		}
+
 
 public boolean validateCustomerObject(Customer cust)
-    {
-if(cust!=null)
-{
-return true ;
-}
-else
-{
-return false;
-}
+ {
+	if(cust!=null)
+	{
+	return true ;
+	}
+	else
+	{
+	return false;
+	}
 }
