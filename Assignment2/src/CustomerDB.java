@@ -102,7 +102,7 @@ public class CustomerDB
         System.out.print("Enter age: ");
         int age = input.nextLine;
 
-	Customer cust = new Customer.CustomerBuilder(name,number,EmailAddress,cnic,accountNumber,status,age).build();;
+	Customer cust = new Customer.CustomerBuilder(name,number,EmailAddress,cnic,accountNumber,status,age).build();
 
         try (
                 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/" + Globals.getDb_name(), Globals.getDb_username(), Globals.getDb_pass());
