@@ -102,6 +102,7 @@ public class CustomerDB
         System.out.print("Enter age: ");
         int age = input.nextLine;
 
+	    //CustomerBuilder Instantiation
 	Customer cust = new Customer.CustomerBuilder(name,number,EmailAddress,cnic,accountNumber,status,age).build();
 
         try (
