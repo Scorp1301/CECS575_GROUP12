@@ -106,12 +106,7 @@ public CustomerBuilder priority_status(int priority_status)
 this.priority_status=priority_status;
 }
 
-public Customer build() 
-{
-	Customer cust =  new Customer(this);
-	validateCustomerObject(Customer);
-	return cust;
-}
+
   
 //Return the finally constructed Customer  object
 		public Customer build() 
