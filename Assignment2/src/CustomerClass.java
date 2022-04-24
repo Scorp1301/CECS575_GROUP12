@@ -113,7 +113,7 @@ this.priority_status=priority_status;
 		{
 			Customer cust =  new Customer(this);
 			Boolean validated=validateCustomerObject(cust);
-			if(validated)
+			if(validated == true)
 			return cust;
 		}
    
