@@ -73,7 +73,6 @@ public static class CustomerBuilder
     private String account_number;
     private int priority_status;
 
-}
 
 public CustomerBuilder(String name,String cnic)
 {
@@ -116,7 +115,19 @@ this.priority_status=priority_status;
 			if(validated == true)
 			return cust;
 		}
-   
+	
+	public boolean validateCustomerObject(Customer cust)
+ {
+	if(cust!=null)
+	{
+	return true ;
+	}
+	else
+	{
+	return false;
+	}
+}
+}
     public void display() {
         System.out.print("Name: ");
         System.out.println(name);
@@ -141,15 +152,6 @@ this.priority_status=priority_status;
     }
 
 
+}
 
-public boolean validateCustomerObject(Customer cust)
- {
-	if(cust!=null)
-	{
-	return true ;
-	}
-	else
-	{
-	return false;
-	}
 }
