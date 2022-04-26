@@ -1,4 +1,4 @@
-public class BookingTheEvent implements Event
+public class BookingTheEvent implements EventInterface
 {
 
 @Override
